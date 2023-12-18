@@ -21,7 +21,7 @@ public class CabLocationController {
         int range = 100;
         while (range > 0) {
             cabLocationService.updateLocation(Math.random() + ", " + Math.random());
-            Thread.sleep(100);
+            Thread.sleep(500);
             range--;
         }
         return new ResponseEntity<>(Map.of("message", "Location updated"), HttpStatus.OK);
